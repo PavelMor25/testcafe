@@ -4,7 +4,7 @@ const { getInstallations: listBrowsers }     = require('testcafe-browser-tools')
 const { CLIENT_TEST_LOCAL_BROWSERS_ALIASES } = require('../constants/client-test-settings');
 
 function runTests (env, tests, settings, runOpts) {
-    env.TRAVIS = false;
+    env.TRAVIS = true;
     return gulp
         .src(tests)
         .pipe(qunitHarness(settings, env, runOpts));
