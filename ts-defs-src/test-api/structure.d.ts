@@ -105,6 +105,10 @@ interface FixtureFn {
      */
     disablePageCaching: this;
     /**
+     * Disables concurrency setting for this fixture.
+     */
+    disableConcurrency(): void;
+    /**
      * WARNING: This feature is experimental and is not recommended for everyday use. It can be removed in the future TestCafe versions.
      *
      * Disables page reloading which would happen right before each test in this fixture.
