@@ -135,7 +135,10 @@ export default class APIBasedTestFileCompilerBase extends TestFileCompilerBase {
                 if (APIBasedTestFileCompilerBase._isNodeModulesDep(filename) && hadGlobalAPI)
                     this._removeGlobalAPI();
 
-                this._compileExternalModule(mod, filename, requireCompilers[ext], origExt);
+                // this._compileExternalModule(mod, filename, requireCompilers[ext], origExt);
+
+                if (!APIBasedTestFileCompilerBase._isNodeModulesDep(filename))
+                    this._compileExternalModule(mod, filename, requireCompilers[ext], origExt);
 
                 if (hadGlobalAPI && !this._hasGlobalAPI())
                     this._addGlobalAPI(testFile);
