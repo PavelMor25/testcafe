@@ -2,7 +2,7 @@
 
 ## v3.3.0 (2023-08-29)
 
-TestCafe v3.3.0 includes important bug fixes and quality of life improvements.
+TestCafe v3.3.0 includes important bug fixes and quality of life improvements. 
 
 ### Bug Fixes
 
